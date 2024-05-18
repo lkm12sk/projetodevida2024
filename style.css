@@ -1,59 +1,65 @@
 @import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
 
-:root{
-    --cor-de-fundo: rgb(126, 53, 196);
-    --verde: rgb(36, 255, 54);
-    --branco: white;
+:root {
+    --cor-de-fundo: #8c2cc4;
+    --verde: #6FFF57;
+    --branco: #FFFFFF;
+    --botao-ativo: #0b9c12;
+    --botao-inativo: rgb(0, 0, 0);
+    --texto-fundo: rgba(58, 55, 94, 0.3);
+}
+
+body {
+    background-color: var(--cor-de-fundo);
+    color: var(--branco);
+    font-family: "Poetsen One" , sans-serif;
 }
 
 
- header{
-    background-color: rgb(0, 0, 0);
-}
-
-
- .cabeçalho {
-    display: flex;
+.conteúdo-principal {
+    display: center;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     max-width: 1200px;
     width: 100%;
-    margin: auto;
- }
+    margin: 0 auto;
+}
 
-
- .título-principal {
-    text-align: left;
+.título-principal {
+    text-align: center;
     width: 100%;
-    font-size: 32;
- }
+    font-size: 32px;
+}
 
- #Lorena {
+.título-principal span {
     color: var(--verde);
- }
+}
 
 .botão {
     font-family: "Poetsen One", sans-serif;
     background-color: var(--botao-inativo);
-    color: rgb(7, 255, 48);
+    color: var(--verde);
     display: flex;
     justify-content: center;
     padding: 1em;
+    font-size: 18px;
     align-items: center;
     width: 100%;
-
     border-bottom: 4px solid var(--botao-ativo);
     border-left: 2px solid var(--botao-ativo);
     border-right: 2px solid var(--botao-ativo);
     border-top: none;
-    border-bottom-color: white;
 }
 
+.botão:first-child {
+    border-radius: 40px 40px 0 0;
+}
 
 .botões {
     display: block;
 }
+
 
 @media screen and (min-width: 768px) {
     .botões {
@@ -61,37 +67,10 @@
     }
 
     .botão:first-child {
-        border-radius: 40px 40px 0 0;
+        border-radius: 40px 0 0 0;
     }
 
-    @media screen and (min-width: 768px) {
-        .botões {
-            display: flex;
-        }
-        .botão:first-child {
-            border-radius: 40px 0 0 0;
-        }
-        .botão:last-child {
-            border-radius: 0 40px 0 0;
-        }
+    .botão:last-child {
+        border-radius: 0 40px 0 0;
     }
-
 }
-
- body{
-    background-color: var(--cor-de-fundo);
-    color: var(--branco);
-    font-family: "Poetsen One", sans-serif;
-    font-weight: 400;
-    font-style: normal; 
-
- }
-
-
-
-
-
-
-
-
-
